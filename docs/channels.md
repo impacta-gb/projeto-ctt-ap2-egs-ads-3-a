@@ -16,7 +16,7 @@ msg := <-ch
 fmt.Println(msg)
 ```
 
-## Channel com buffer
+## Channel com buffer,
 
 ```go
 fila := make(chan int, 2)

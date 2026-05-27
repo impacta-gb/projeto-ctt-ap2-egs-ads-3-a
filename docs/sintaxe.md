@@ -16,7 +16,7 @@ func main() {
 	ativo := true
 
 	fmt.Println(nome, idade, ativo)
-}
+},
 ```
 
 ## Tipos basicos

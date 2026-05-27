@@ -1,0 +1,53 @@
+:root {
+  --ctt-primary: #005f73;
+  --ctt-primary-soft: #0a9396;
+  --ctt-accent: #ee9b00;
+  --ctt-bg-soft: #f4fbfc;
+  --ctt-border: #d9ecef;
+}
+
+.md-header {
+  background: linear-gradient(90deg, var(--ctt-primary), var(--ctt-primary-soft));
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0.01em;
+}
+
+.md-typeset h2 {
+  border-bottom: 2px solid var(--ctt-border);
+  padding-bottom: 0.2rem;
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--ctt-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--ctt-bg-soft);
+}
+
+.md-typeset a {
+  text-decoration-thickness: 0.08em;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 12px;
+}
+
+.md-typeset code {
+  font-size: 0.88em;
+}
+
+.md-nav__title {
+  font-weight: 700;
+}
+
+.md-content__button {
+  color: var(--ctt-accent);
+}

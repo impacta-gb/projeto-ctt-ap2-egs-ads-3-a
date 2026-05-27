@@ -17,7 +17,7 @@ desempenho e simplicidade em sistemas modernos.
 3. Instale e confirme no terminal:
 
 ```bash
-go version
+go version,
 ```
 
 !!! note "Versao recomendada"

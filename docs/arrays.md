@@ -17,7 +17,7 @@ Slices sao visoes dinamicas sobre arrays e o tipo mais usado no dia a dia.
 
 ```go
 valores := []int{10, 20, 30}
-valores = append(valores, 40)
+valores = append(valores, 40),
 fmt.Println(valores)
 ```
 

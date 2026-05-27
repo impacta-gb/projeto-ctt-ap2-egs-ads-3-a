@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Markdown in 5min - Minha Documentacao Go (Preview)</title>
+        <title>Structs e Metodos - Minha Documentacao Go (Preview)</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
                                 <a href="../arrays/" class="nav-link">Arrays, Slices e Maps</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../structs/" class="nav-link">Structs e Metodos</a>
+                                <a href="./" class="nav-link active" aria-current="page">Structs e Metodos</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../erros/" class="nav-link">Tratamento de Erros</a>
@@ -75,6 +75,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../arrays/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../erros/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -93,49 +103,25 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#markdown-in-5min" class="nav-link">Markdown in 5min</a>
+            <li class="nav-item" data-bs-level="1"><a href="#structs-e-metodos" class="nav-link">Structs e Metodos</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#headers" class="nav-link">Headers</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#text-formatting" class="nav-link">Text formatting</a>
+            <li class="nav-item" data-bs-level="2"><a href="#criando-uma-struct" class="nav-link">Criando uma struct</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#links-and-images" class="nav-link">Links and images</a>
+            <li class="nav-item" data-bs-level="2"><a href="#criando-instancias" class="nav-link">Criando instancias</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#lists" class="nav-link">Lists</a>
+            <li class="nav-item" data-bs-level="2"><a href="#metodos" class="nav-link">Metodos</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#blockquotes" class="nav-link">Blockquotes</a>
+            <li class="nav-item" data-bs-level="2"><a href="#struct-aninhada" class="nav-link">Struct aninhada</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#code-blocks" class="nav-link">Code blocks</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#tables" class="nav-link">Tables</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#horizontal-rule" class="nav-link">Horizontal rule</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#task-lists" class="nav-link">Task lists</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#escaping-characters" class="nav-link">Escaping characters</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#line-breaks" class="nav-link">Line breaks</a>
+            <li class="nav-item" data-bs-level="2"><a href="#tags-em-structs" class="nav-link">Tags em structs</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -146,80 +132,50 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="markdown-in-5min">Markdown in 5min</h1>
-<h2 id="headers">Headers</h2>
-<div class="highlight"><pre><span></span><code># H1 Header
-## H2 Header
-### H3 Header
-#### H4 Header
-##### H5 Header
-###### H6 Header
+<h1 id="structs-e-metodos">Structs e Metodos</h1>
+<p>Structs sao usadas para organizar dados relacionados em um unico tipo.</p>
+<h2 id="criando-uma-struct">Criando uma struct</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">Pessoa</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Nome</span><span class="w">  </span><span class="kt">string</span>
+<span class="w">    </span><span class="nx">Idade</span><span class="w"> </span><span class="kt">int</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="text-formatting">Text formatting</h2>
-<div class="highlight"><pre><span></span><code>**bold text**
-*italic text*
-***bold and italic***
-~~strikethrough~~
-`inline code`
+<h2 id="criando-instancias">Criando instancias</h2>
+<div class="highlight"><pre><span></span><code><span class="nx">p1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Pessoa</span><span class="p">{</span><span class="nx">Nome</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">Idade</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">}</span>
+<span class="nx">p2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Pessoa</span><span class="p">{</span><span class="s">&quot;Bruno&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">}</span>
 </code></pre></div>
-<h2 id="links-and-images">Links and images</h2>
-<div class="highlight"><pre><span></span><code>[Link text](https://example.com)
-[Link with title](https://example.com &quot;Hover title&quot;)
-![Alt text](image.jpg)
-![Image with title](image.jpg &quot;Image title&quot;)
+<h2 id="metodos">Metodos</h2>
+<p>Metodo com receptor por valor:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="nx">Pessoa</span><span class="p">)</span><span class="w"> </span><span class="nx">Saudacao</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Ola, meu nome e &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">Nome</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="lists">Lists</h2>
-<div class="highlight"><pre><span></span><code>Unordered:
+<p>Metodo com receptor ponteiro (altera estado):</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="o">*</span><span class="nx">Pessoa</span><span class="p">)</span><span class="w"> </span><span class="nx">FazerAniversario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p</span><span class="p">.</span><span class="nx">Idade</span><span class="o">++</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="struct-aninhada">Struct aninhada</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">Endereco</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Cidade</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">    </span><span class="nx">Estado</span><span class="w"> </span><span class="kt">string</span>
+<span class="p">}</span>
 
-- Item 1
-- Item 2
-  - Nested item
-
-Ordered:
-
-1. First item
-2. Second item
-3. Third item
+<span class="kd">type</span><span class="w"> </span><span class="nx">Cliente</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Nome</span><span class="w">     </span><span class="kt">string</span>
+<span class="w">    </span><span class="nx">Endereco</span><span class="w"> </span><span class="nx">Endereco</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="blockquotes">Blockquotes</h2>
-<div class="highlight"><pre><span></span><code>&gt; This is a blockquote
-&gt; Multiple lines
-&gt;&gt; Nested quote
+<h2 id="tags-em-structs">Tags em structs</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">Usuario</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ID</span><span class="w">    </span><span class="kt">int</span><span class="w">    </span><span class="s">`json:&quot;id&quot;`</span>
+<span class="w">    </span><span class="nx">Email</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;email&quot;`</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="code-blocks">Code blocks</h2>
-<div class="highlight"><pre><span></span><code>```javascript
-function hello() {
-  console.log(&quot;Hello, world!&quot;);
-}
-```
-</code></pre></div>
-<h2 id="tables">Tables</h2>
-<div class="highlight"><pre><span></span><code>| Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
-| Row 1    | Data     | Data     |
-| Row 2    | Data     | Data     |
-</code></pre></div>
-<h2 id="horizontal-rule">Horizontal rule</h2>
-<div class="highlight"><pre><span></span><code>---
-or
-***
-or
-___
-</code></pre></div>
-<h2 id="task-lists">Task lists</h2>
-<div class="highlight"><pre><span></span><code>- [x] Completed task
-- [ ] Incomplete task
-- [ ] Another task
-</code></pre></div>
-<h2 id="escaping-characters">Escaping characters</h2>
-<div class="highlight"><pre><span></span><code>Use backslash to escape: \* \_ \# \`
-</code></pre></div>
-<h2 id="line-breaks">Line breaks</h2>
-<div class="highlight"><pre><span></span><code>End a line with two spaces  
-to create a line break.
-
-Or use a blank line for a new paragraph.
-</code></pre></div></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>Use receptor ponteiro quando precisar modificar o estado da struct.</p></div>
             </div>
         </div>
 

@@ -4,27 +4,27 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Minha Documentacao Go (Preview)</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome.min.css" rel="stylesheet">
-        <link href="css/brands.min.css" rel="stylesheet">
-        <link href="css/solid.min.css" rel="stylesheet">
-        <link href="css/v4-font-face.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Testes Automatizados - Minha Documentacao Go (Preview)</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">Minha Documentacao Go (Preview)</a>
+                <a class="navbar-brand" href="..">Minha Documentacao Go (Preview)</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,37 +35,37 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="." class="nav-link active" aria-current="page">Inicio</a>
+                                <a href=".." class="nav-link">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a href="intro/" class="nav-link">Introducao e Instalacao</a>
+                                <a href="../intro/" class="nav-link">Introducao e Instalacao</a>
                             </li>
                             <li class="nav-item">
-                                <a href="sintaxe/" class="nav-link">Sintaxe Basica e Variaveis</a>
+                                <a href="../sintaxe/" class="nav-link">Sintaxe Basica e Variaveis</a>
                             </li>
                             <li class="nav-item">
-                                <a href="controle/" class="nav-link">Estruturas de Controle</a>
+                                <a href="../controle/" class="nav-link">Estruturas de Controle</a>
                             </li>
                             <li class="nav-item">
-                                <a href="arrays/" class="nav-link">Arrays, Slices e Maps</a>
+                                <a href="../arrays/" class="nav-link">Arrays, Slices e Maps</a>
                             </li>
                             <li class="nav-item">
-                                <a href="structs/" class="nav-link">Structs e Metodos</a>
+                                <a href="../structs/" class="nav-link">Structs e Metodos</a>
                             </li>
                             <li class="nav-item">
-                                <a href="erros/" class="nav-link">Tratamento de Erros</a>
+                                <a href="../erros/" class="nav-link">Tratamento de Erros</a>
                             </li>
                             <li class="nav-item">
-                                <a href="goroutines/" class="nav-link">Concorrencia I - Goroutines</a>
+                                <a href="../goroutines/" class="nav-link">Concorrencia I - Goroutines</a>
                             </li>
                             <li class="nav-item">
-                                <a href="channels/" class="nav-link">Concorrencia II - Channels</a>
+                                <a href="../channels/" class="nav-link">Concorrencia II - Channels</a>
                             </li>
                             <li class="nav-item">
-                                <a href="modules/" class="nav-link">Go Modules</a>
+                                <a href="../modules/" class="nav-link">Go Modules</a>
                             </li>
                             <li class="nav-item">
-                                <a href="testes/" class="nav-link">Testes Automatizados</a>
+                                <a href="./" class="nav-link active" aria-current="page">Testes Automatizados</a>
                             </li>
                         </ul>
 
@@ -76,12 +76,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../modules/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="intro/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -103,13 +103,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#documentacao-de-go-ctt-ap2" class="nav-link">Documentacao de Go - CTT AP2</a>
+            <li class="nav-item" data-bs-level="1"><a href="#testes-automatizados-em-go" class="nav-link">Testes Automatizados em Go</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#o-que-voce-vai-encontrar" class="nav-link">O que voce vai encontrar</a>
+            <li class="nav-item" data-bs-level="2"><a href="#estrutura-de-arquivos-de-teste" class="nav-link">Estrutura de arquivos de teste</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#como-usar-este-material" class="nav-link">Como usar este material</a>
+            <li class="nav-item" data-bs-level="2"><a href="#testando-erros" class="nav-link">Testando erros</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cobertura-de-testes" class="nav-link">Cobertura de testes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -120,31 +124,84 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="documentacao-de-go-ctt-ap2">Documentacao de Go - CTT AP2</h1>
-<p>Este site foi montado pelo grupo para reunir os principais fundamentos da linguagem Go de um jeito direto, com exemplos práticos.</p>
-<p>A ideia e que cada pagina funcione como um guia rapido para consulta durante os estudos e durante o desenvolvimento de exercicios.</p>
-<h2 id="o-que-voce-vai-encontrar">O que voce vai encontrar</h2>
-<ul>
-<li>Introducao e instalacao do Go</li>
-<li>Sintaxe basica e variaveis</li>
-<li>Estruturas de controle (<code>if</code>, <code>for</code>, <code>switch</code>)</li>
-<li>Arrays, slices e maps</li>
-<li>Structs e metodos</li>
-<li>Tratamento de erros</li>
-<li>Concorrencia com goroutines e channels</li>
-<li>Go Modules</li>
-<li>Testes automatizados</li>
-</ul>
-<h2 id="como-usar-este-material">Como usar este material</h2>
-<ol>
-<li>Comece por Introducao e Instalacao.</li>
-<li>Passe por Sintaxe, Controle e Estruturas de dados.</li>
-<li>Depois estude Concorrencia, Modules e Testes.</li>
-</ol>
+<h1 id="testes-automatizados-em-go">Testes Automatizados em Go</h1>
+<p>Go possui suporte nativo para testes automatizados através do pacote <code>testing</code>.</p>
+<p>Os testes são fundamentais para garantir a qualidade e o funcionamento correto do código.</p>
+<hr />
+<h2 id="estrutura-de-arquivos-de-teste">Estrutura de arquivos de teste</h2>
+<p>Os arquivos de teste devem terminar com <code>_test.go</code>.</p>
+<p>Exemplo:</p>
+<p>```text
+calculadora.go
+calculadora_test.go </p>
+<p>Criando um teste simples</p>
+<p>Arquivo: calculadora.go</p>
+<p>package main</p>
+<p>func Soma(a, b int) int {
+    return a + b
+}</p>
+<p>Arquivo: calculadora_test.go</p>
+<p>package main</p>
+<p>import "testing"</p>
+<p>func TestSoma(t *testing.T) {
+    resultado := Soma(2, 3)
+    esperado := 5</p>
+<div class="highlight"><pre><span></span><code>if resultado != esperado {
+    t.Errorf(&quot;Esperado %d, mas obteve %d&quot;, esperado, resultado)
+}
+</code></pre></div>
+<p>}</p>
+<p>Executando testes
+go test </p>
+<p>Testes com múltiplos casos (Table Driven)
+func TestSomaTabela(t *testing.T) {
+    testes := []struct {
+        a, b     int
+        esperado int
+    }{
+        {2, 3, 5},
+        {1, 1, 2},
+        {0, 0, 0},
+    }</p>
+<div class="highlight"><pre><span></span><code>for _, teste := range testes {
+    resultado := Soma(teste.a, teste.b)
+
+    if resultado != teste.esperado {
+        t.Errorf(&quot;Erro: esperado %d, obteve %d&quot;, teste.esperado, resultado)
+    }
+}
+</code></pre></div>
+<p>}</p>
+<h2 id="testando-erros">Testando erros</h2>
+<p>func Dividir(a, b int) (int, error) {
+    if b == 0 {
+        return 0, fmt.Errorf("divisão por zero")
+    }
+    return a / b, nil
+}</p>
+<p>func TestDividir(t *testing.T) {
+    _, err := Dividir(10, 0)</p>
+<div class="highlight"><pre><span></span><code>if err == nil {
+    t.Error(&quot;Esperava erro ao dividir por zero&quot;)
+}
+</code></pre></div>
+<p>}</p>
+<h2 id="cobertura-de-testes">Cobertura de testes</h2>
+<p>go test -cover</p>
+<p>Mostra quanto do código está sendo testado. </p>
+<p>Boas práticas
+Criar testes para todas as funções críticas
+Usar nomes claros (TestNomeFuncao)
+Testar casos de sucesso e erro
+Manter testes simples e objetivos </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>Código sem testes pode gerar bugs em produção.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Se estiver comecando em Go agora, execute todos os exemplos localmente para fixar melhor.</p>
-</div></div>
+</div>
+<p>Use testes automatizados para validar mudanças antes de subir o código.</p></div>
             </div>
         </div>
 
@@ -152,13 +209,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -223,8 +280,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.6.1
-Build Date UTC : 2026-05-25 23:30:46.156604+00:00
--->

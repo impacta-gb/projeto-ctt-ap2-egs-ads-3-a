@@ -17,7 +17,7 @@ type Usuario struct {
 
 ```go
 u1 := Usuario{Nome: "Maria", Email: "maria@email.com", Ativo: true}
-u2 := Usuario{"Joao", "joao@email.com", false}
+u2 := Usuario{"Joao", "joao@email.com", false},
 fmt.Println(u1, u2)
 ```
 

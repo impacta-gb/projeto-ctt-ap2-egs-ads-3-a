@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>Minha Documentacao Go (Preview)</title>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/fontawesome.min.css" rel="stylesheet">
-        <link href="/css/brands.min.css" rel="stylesheet">
-        <link href="/css/solid.min.css" rel="stylesheet">
-        <link href="/css/v4-font-face.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Concorrencia I - Goroutines - Minha Documentacao Go (Preview)</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/.">Minha Documentacao Go (Preview)</a>
+                <a class="navbar-brand" href="..">Minha Documentacao Go (Preview)</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,37 +35,37 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="/." class="nav-link">Inicio</a>
+                                <a href=".." class="nav-link">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/intro/" class="nav-link">Introducao e Instalacao</a>
+                                <a href="../intro/" class="nav-link">Introducao e Instalacao</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/sintaxe/" class="nav-link">Sintaxe Basica e Variaveis</a>
+                                <a href="../sintaxe/" class="nav-link">Sintaxe Basica e Variaveis</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/controle/" class="nav-link">Estruturas de Controle</a>
+                                <a href="../controle/" class="nav-link">Estruturas de Controle</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/arrays/" class="nav-link">Arrays, Slices e Maps</a>
+                                <a href="../arrays/" class="nav-link">Arrays, Slices e Maps</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/structs/" class="nav-link">Structs e Metodos</a>
+                                <a href="../structs/" class="nav-link">Structs e Metodos</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/erros/" class="nav-link">Tratamento de Erros</a>
+                                <a href="../erros/" class="nav-link">Tratamento de Erros</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/goroutines/" class="nav-link">Concorrencia I - Goroutines</a>
+                                <a href="./" class="nav-link active" aria-current="page">Concorrencia I - Goroutines</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/channels/" class="nav-link">Concorrencia II - Channels</a>
+                                <a href="../channels/" class="nav-link">Concorrencia II - Channels</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/modules/" class="nav-link">Go Modules</a>
+                                <a href="../modules/" class="nav-link">Go Modules</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/testes/" class="nav-link">Testes Automatizados</a>
+                                <a href="../testes/" class="nav-link">Testes Automatizados</a>
                             </li>
                         </ul>
 
@@ -75,6 +75,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../erros/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../channels/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -82,15 +92,77 @@
 
         <div class="container">
             <div class="row">
-
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
     </div>
 
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#goroutines-em-go" class="nav-link">Goroutines em Go</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#exemplo-basico" class="nav-link">Exemplo básico</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
 
+<h1 id="goroutines-em-go">Goroutines em Go</h1>
+<p>Goroutines são funções que executam de forma concorrente (em paralelo leve).</p>
+<p>Elas são iniciadas com a palavra-chave <code>go</code>.</p>
+<h2 id="exemplo-basico">Exemplo básico</h2>
+<p>```go
+package main</p>
+<p>import (
+    "fmt"
+    "time"
+)</p>
+<p>func mensagem() {
+    fmt.Println("Executando em goroutine")
+}</p>
+<p>func main() {
+    go mensagem()</p>
+<div class="highlight"><pre><span></span><code>fmt.Println(&quot;Executando função principal&quot;)
+
+time.Sleep(time.Second)
+</code></pre></div>
+<p>}</p>
+<p>Explicação
+go mensagem() executa a função em paralelo
+time.Sleep é usado para esperar a goroutine terminar</p>
+<p>Explicação
+go mensagem() executa a função em paralelo
+time.Sleep é usado para esperar a goroutine terminar
+Múltiplas goroutines
+for i := 0; i &lt; 3; i++ {
+    go func(i int) {
+        fmt.Println("Goroutine:", i)
+    }(i)
+}</p>
+<p>time.Sleep(time.Second)
+Boas práticas
+Usar sincronização (channels ou waitgroups)
+Evitar concorrência sem controle</p>
+<p>Boas práticas
+Usar sincronização (channels ou waitgroups)
+Evitar concorrência sem controle</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>Goroutines sem controle podem causar bugs difíceis.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>Use channels para comunicação segura entre goroutines.</p></div>
             </div>
         </div>
 
@@ -98,13 +170,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = "/",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js"></script>
-        <script src="/search/main.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

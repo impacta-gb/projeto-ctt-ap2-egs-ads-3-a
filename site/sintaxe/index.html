@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Markdown in 5min - Minha Documentacao Go (Preview)</title>
+        <title>Sintaxe Basica e Variaveis - Minha Documentacao Go (Preview)</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
                                 <a href="../intro/" class="nav-link">Introducao e Instalacao</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../sintaxe/" class="nav-link">Sintaxe Basica e Variaveis</a>
+                                <a href="./" class="nav-link active" aria-current="page">Sintaxe Basica e Variaveis</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../controle/" class="nav-link">Estruturas de Controle</a>
@@ -75,6 +75,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../intro/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../controle/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -93,49 +103,25 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#markdown-in-5min" class="nav-link">Markdown in 5min</a>
+            <li class="nav-item" data-bs-level="1"><a href="#sintaxe-basica-e-variaveis" class="nav-link">Sintaxe Basica e Variaveis</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#headers" class="nav-link">Headers</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#text-formatting" class="nav-link">Text formatting</a>
+            <li class="nav-item" data-bs-level="2"><a href="#estrutura-minima" class="nav-link">Estrutura minima</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#links-and-images" class="nav-link">Links and images</a>
+            <li class="nav-item" data-bs-level="2"><a href="#variaveis-e-constantes" class="nav-link">Variaveis e constantes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#lists" class="nav-link">Lists</a>
+            <li class="nav-item" data-bs-level="2"><a href="#tipos-mais-comuns" class="nav-link">Tipos mais comuns</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#blockquotes" class="nav-link">Blockquotes</a>
+            <li class="nav-item" data-bs-level="2"><a href="#funcoes" class="nav-link">Funcoes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#code-blocks" class="nav-link">Code blocks</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#tables" class="nav-link">Tables</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#horizontal-rule" class="nav-link">Horizontal rule</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#task-lists" class="nav-link">Task lists</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#escaping-characters" class="nav-link">Escaping characters</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#line-breaks" class="nav-link">Line breaks</a>
+            <li class="nav-item" data-bs-level="2"><a href="#comentarios" class="nav-link">Comentarios</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -146,80 +132,77 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="markdown-in-5min">Markdown in 5min</h1>
-<h2 id="headers">Headers</h2>
-<div class="highlight"><pre><span></span><code># H1 Header
-## H2 Header
-### H3 Header
-#### H4 Header
-##### H5 Header
-###### H6 Header
-</code></pre></div>
-<h2 id="text-formatting">Text formatting</h2>
-<div class="highlight"><pre><span></span><code>**bold text**
-*italic text*
-***bold and italic***
-~~strikethrough~~
-`inline code`
-</code></pre></div>
-<h2 id="links-and-images">Links and images</h2>
-<div class="highlight"><pre><span></span><code>[Link text](https://example.com)
-[Link with title](https://example.com &quot;Hover title&quot;)
-![Alt text](image.jpg)
-![Image with title](image.jpg &quot;Image title&quot;)
-</code></pre></div>
-<h2 id="lists">Lists</h2>
-<div class="highlight"><pre><span></span><code>Unordered:
+<h1 id="sintaxe-basica-e-variaveis">Sintaxe Basica e Variaveis</h1>
+<p>A sintaxe do Go foi pensada para manter o codigo legivel e padronizado.</p>
+<h2 id="estrutura-minima">Estrutura minima</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-- Item 1
-- Item 2
-  - Nested item
+<span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
 
-Ordered:
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, Go&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="variaveis-e-constantes">Variaveis e constantes</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">nome</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Eduardo&quot;</span>
+<span class="nx">idade</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">21</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">linguagem</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Go&quot;</span>
+</code></pre></div>
+<ul>
+<li><code>var</code> permite declarar com tipo explicito.</li>
+<li><code>:=</code> faz declaracao curta dentro de funcao.</li>
+<li><code>const</code> define valor imutavel.</li>
+</ul>
+<h2 id="tipos-mais-comuns">Tipos mais comuns</h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td>float64</td>
+<td><code>3.14</code></td>
+</tr>
+<tr>
+<td>string</td>
+<td><code>"texto"</code></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="funcoes">Funcoes</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">Somar</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Retorno multiplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">Dividir</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">float64</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">float64</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;divisao por zero&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="comentarios">Comentarios</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">// comentario de uma linha</span>
 
-1. First item
-2. Second item
-3. Third item
+<span class="cm">/* comentario</span>
+<span class="cm">   em varias linhas */</span>
 </code></pre></div>
-<h2 id="blockquotes">Blockquotes</h2>
-<div class="highlight"><pre><span></span><code>&gt; This is a blockquote
-&gt; Multiple lines
-&gt;&gt; Nested quote
-</code></pre></div>
-<h2 id="code-blocks">Code blocks</h2>
-<div class="highlight"><pre><span></span><code>```javascript
-function hello() {
-  console.log(&quot;Hello, world!&quot;);
-}
-```
-</code></pre></div>
-<h2 id="tables">Tables</h2>
-<div class="highlight"><pre><span></span><code>| Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
-| Row 1    | Data     | Data     |
-| Row 2    | Data     | Data     |
-</code></pre></div>
-<h2 id="horizontal-rule">Horizontal rule</h2>
-<div class="highlight"><pre><span></span><code>---
-or
-***
-or
-___
-</code></pre></div>
-<h2 id="task-lists">Task lists</h2>
-<div class="highlight"><pre><span></span><code>- [x] Completed task
-- [ ] Incomplete task
-- [ ] Another task
-</code></pre></div>
-<h2 id="escaping-characters">Escaping characters</h2>
-<div class="highlight"><pre><span></span><code>Use backslash to escape: \* \_ \# \`
-</code></pre></div>
-<h2 id="line-breaks">Line breaks</h2>
-<div class="highlight"><pre><span></span><code>End a line with two spaces  
-to create a line break.
-
-Or use a blank line for a new paragraph.
-</code></pre></div></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>Use <code>go fmt</code> com frequencia para manter o estilo oficial da linguagem.</p></div>
             </div>
         </div>
 

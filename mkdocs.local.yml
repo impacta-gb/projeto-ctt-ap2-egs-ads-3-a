@@ -1,0 +1,23 @@
+site_name: Documentacao Go - CTT AP2 (Local)
+docs_dir: docs
+site_dir: site
+theme:
+  name: mkdocs
+nav:
+  - Início: index.md
+  - "Introdução e Instalação": intro.md
+  - "Sintaxe Básica e Variáveis": sintaxe.md
+  - "Estruturas de Controle (If, For, Switch)": controle.md
+  - "Arrays, Slices e Maps": arrays.md
+  - "Structs e Métodos": structs.md
+  - "Tratamento de Erros (Error Handling)": erros.md
+  - "Concorrência I: Goroutines": goroutines.md
+  - "Concorrência II: Channels": channels.md
+  - "Gerenciamento de Pacotes (Go Modules)": modules.md
+  - "Testes Automatizados em Go": testes.md
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight

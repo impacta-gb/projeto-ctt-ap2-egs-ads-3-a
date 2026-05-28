@@ -6,7 +6,7 @@ Go Modules e o sistema oficial para gerenciar dependencias.
 
 ```bash
 go mod init github.com/sua-org/seu-projeto
-```
+``` ,
 
 Isso cria o arquivo `go.mod`.
 

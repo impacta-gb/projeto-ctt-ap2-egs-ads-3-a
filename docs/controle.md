@@ -1,8 +1,11 @@
-# Estruturas de Controle
 
-Go possui poucas estruturas de controle, mas muito poderosas.
+# Estruturas de Controle (If, For, Switch)
 
-## If
+Go possui poucas, mas poderosas, estruturas de controle. Elas tornam o código simples, seguro e fácil de ler.
+
+## If/Else
+
+O `if` em Go é direto e pode conter inicialização de variáveis:
 
 ```go
 if idade >= 18 {
@@ -10,54 +13,67 @@ if idade >= 18 {
 } else {
 	fmt.Println("Menor de idade")
 }
-```
 
-Tambem e possivel inicializar variavel dentro do `if`:
-
-```go
 if n := len(nome); n > 0 {
-	fmt.Println("Nome valido")
+	fmt.Println("Nome válido")
 }
 ```
+
+!!! tip "Dica"
+	Não use parênteses na condição do `if` em Go.
 
 ## For
 
-Go usa apenas `for`, cobrindo os papeis de `while` e `do-while`.
+Go só tem o laço `for`, que cobre todos os casos de repetição:
 
 ```go
+// Clássico
 for i := 0; i < 5; i++ {
 	fmt.Println(i)
 }
-```
 
-```go
+// While
 for condicao {
-	// equivalente a while
+	// executa enquanto condicao for verdadeira
+}
+
+// Loop infinito
+for {
+	// executa para sempre
+	break // ou return para sair
 }
 ```
 
-```go
-for {
-	// loop infinito
-	break
-}
-```
+!!! note "Range em coleções"
+	Use `for index, valor := range colecao` para iterar sobre arrays, slices, maps e strings.
 
 ## Switch
 
+O `switch` facilita múltiplas condições:
+
 ```go
 switch dia {
-case "sabado", "domingo":
+case "sábado", "domingo":
 	fmt.Println("Fim de semana")
 case "segunda":
-	fmt.Println("Inicio da semana")
+	fmt.Println("Início da semana")
 default:
-	fmt.Println("Dia util")
+	fmt.Println("Dia útil")
 }
 ```
 
-!!! tip "Switch sem expressao"
-	Um `switch` sem valor pode substituir cadeias longas de `if/else if`.
+!!! tip "Switch sem expressão"
+	Um `switch` sem valor pode substituir cadeias longas de `if/else if`:
+	```go
+	switch {
+	case idade < 12:
+		fmt.Println("Criança")
+	case idade < 18:
+		fmt.Println("Adolescente")
+	default:
+		fmt.Println("Adulto")
+	}
+	```
 
 ```go
 switch {

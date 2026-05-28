@@ -1,29 +1,43 @@
+
 # Arrays, Slices e Maps
 
-Essas estruturas sao fundamentais para manipular colecoes em Go.
+Essas são as principais estruturas para coleções em Go. Cada uma tem características e usos específicos.
 
 ## Arrays
 
-Arrays tem tamanho fixo definido no tipo.
+Arrays têm tamanho fixo e tipo definido. O tamanho faz parte do tipo!
 
 ```go
 var notas [3]int = [3]int{7, 8, 10}
-fmt.Println(notas[0])
+fmt.Println(notas[0]) // 7
 ```
+
+!!! warning "Atenção"
+	Arrays em Go não são redimensionáveis. O tamanho é fixo após a declaração.
 
 ## Slices
 
-Slices sao visoes dinamicas sobre arrays e o tipo mais usado no dia a dia.
+Slices são "fatias" dinâmicas sobre arrays. São a estrutura de coleção mais usada em Go.
 
 ```go
 valores := []int{10, 20, 30}
 valores = append(valores, 40)
-fmt.Println(valores)
+fmt.Println(valores) // [10 20 30 40]
 ```
+
+Você pode criar slices a partir de arrays:
+
+```go
+arr := [5]int{1, 2, 3, 4, 5}
+slc := arr[1:4] // [2 3 4]
+```
+
+!!! note "Referência compartilhada"
+	Slices compartilham o array subjacente. Alterações em um slice podem afetar outros slices derivados do mesmo array.
 
 ## Maps
 
-Maps armazenam pares chave-valor.
+Maps armazenam pares chave-valor, ideais para buscas rápidas.
 
 ```go
 idades := map[string]int{
@@ -37,15 +51,22 @@ if ok {
 }
 ```
 
-## Comparativo rapido
+Você pode adicionar, remover e checar chaves facilmente:
 
-| Estrutura | Tamanho | Acesso por indice | Chave personalizada |
-|---|---|---|---|
-| Array | Fixo | Sim | Nao |
-| Slice | Dinamico | Sim | Nao |
-| Map | Dinamico | Nao | Sim |
+```go
+idades["Carlos"] = 30
+delete(idades, "Luis")
+_, existe := idades["Maria"]
+```
 
-!!! warning "Slice nao e array"
-	Embora parecidos, slices possuem semantica de referencia para o array
-	subjacente. Alteracoes podem refletir em outras slices derivadas.
+## Comparativo rápido
+
+| Estrutura | Tamanho   | Acesso por índice | Chave personalizada |
+|-----------|-----------|-------------------|--------------------|
+| Array     | Fixo      | Sim               | Não                |
+| Slice     | Dinâmico  | Sim               | Não                |
+| Map       | Dinâmico  | Não               | Sim                |
+
+!!! tip "Dica de uso"
+	Prefira slices para listas e maps para buscas por chave. Use arrays apenas quando o tamanho fixo for realmente necessário.
 

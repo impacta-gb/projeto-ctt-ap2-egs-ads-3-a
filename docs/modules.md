@@ -9,7 +9,7 @@ No diretório do seu projeto, execute:
 
 ```bash
 go mod init github.com/sua-org/seu-projeto
-```
+``` ,
 
 Isso cria o arquivo `go.mod`, que define o nome do módulo e as dependências.
 

@@ -4,11 +4,12 @@ Projeto de documentacao da linguagem Go desenvolvido com Zensical,
 seguindo fluxo colaborativo com Feature Branches, Pull Requests,
 Code Review obrigatorio e pipeline CI/CD no GitHub Actions.
 
+
 ## Integrantes
 
-- Integrante 1 - Nome completo
-- Integrante 2 - Nome completo
-- Integrante 3 - Nome completo
+- Eduardo Silva Oliveira - RA 2501142
+- Gilberto Pereira dos Santos Junior - RA 2501533
+- Samuel Mussato Flores - RA 2501486
 
 ## Objetivo do projeto
 

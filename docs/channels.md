@@ -26,7 +26,7 @@ msg := <-ch
 fmt.Println(msg) // "mensagem pronta"
 ```
 
-## Channel com buffer
+## Channel com buffer,
 
 Channels podem ter buffer, permitindo enviar múltiplos valores sem bloqueio imediato:
 

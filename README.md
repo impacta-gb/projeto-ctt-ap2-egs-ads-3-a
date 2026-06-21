@@ -18,7 +18,7 @@ Code Review obrigatorio e pipeline CI/CD no GitHub Actions.
 - Garantir qualidade com validacao em matriz de versoes Python.
 - Aplicar boas praticas de colaboracao no GitHub.
 
-## Estrutura de conteudo
+## Estrutura de conteudo,
 
 O menu contem as 10 paginas obrigatorias:
 
